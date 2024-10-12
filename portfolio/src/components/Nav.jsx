@@ -29,10 +29,10 @@ const Navbar = () => {
                 {/* Liens de navigation */}
                 <ul className="flex space-x-6 bg-purple-500 px-6 py-2 rounded-full dark:bg-dark-purple-500">
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
-                        <a href="#home" className="p-2">Home</a>
+                        <a href="#home" className="p-2">Accueil</a>
                     </li>
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
-                        <a href="#work" className="p-2">Projects</a>
+                        <a href="#work" className="p-2">Projets</a>
                     </li>
                     {/* <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <a href="#about" className="p-2">About</a>
