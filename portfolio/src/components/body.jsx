@@ -48,6 +48,23 @@ const body = () => {
                 </div>
             </div>
         </div>
+        <div className="bg-purple-300">
+            <h1 className="text-4xl text-purple-1100 font-bold">Expérience Professionnelle</h1>
+            <div>
+                <p className="text-purple-1100 text-lg mt-4">Stage à Thalès: <br/>Stage de première année de BTS SIO. 
+                    Découverte du déroulement d’un projet dans une grande 
+                    entreprise et développement d’un logiciel en python servant à 
+                    piloter des équipements radiofréquence.
+                </p>
+            </div>
+            <div>
+                <p className="text-purple-1100 text-lg mt-4">Travail saisonnier à Leclerc: <br/>
+                    Expérience professionnelle qui 
+                    m’as appris le travail en équipe et la vie d’une entreprise de 
+                    grande distribution.
+                </p>
+            </div>
+        </div>
     </div>
   )
 }
