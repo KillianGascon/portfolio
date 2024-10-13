@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaGithub,FaLinkedin } from 'react-icons/fa';
 import { BsSun, BsMoon } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     // État pour le mode sombre
@@ -22,6 +23,7 @@ const Navbar = () => {
                 <div className="flex items-center space-x-2">
                     <div className="bg-purple-500 p-2 rounded">
                         <img src="/logo.svg" alt="logo" className="h-8 w-8" />
+                        <Link to="/home" className="p-2"></Link>
                     </div>
                     <span className="text-purple-1200 dark:text-dark-purple-1200 text-lg font-bold">Gascon Killian</span>
                 </div>
@@ -29,10 +31,10 @@ const Navbar = () => {
                 {/* Liens de navigation */}
                 <ul className="flex space-x-6 bg-purple-500 px-6 py-2 rounded-full dark:bg-dark-purple-500">
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
-                        <a href="#home" className="p-2">Accueil</a>
+                        <Link to="/home" className="p-2">Accueil</Link>
                     </li>
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
-                        <a href="#work" className="p-2">Projets</a>
+                        <Link to="/work" className="p-2">Projets</Link>
                     </li>
                     {/* <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <a href="#about" className="p-2">About</a>

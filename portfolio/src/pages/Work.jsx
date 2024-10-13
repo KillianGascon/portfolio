@@ -1,8 +1,12 @@
 import React from 'react'
+import Nav from "../components/public/Nav";
 
 const Work = () => {
   return (
     <div>
+        <div>
+            <Nav/>
+        </div>
       <div className="text-left bg-purple-300">
             <h1 className="text-4xl text-purple-1100 font-bold">Mes technos préférées</h1>
             <div className='flex items-center'>
