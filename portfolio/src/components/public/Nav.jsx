@@ -17,7 +17,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full py-4 bg-purple-100 dark:bg-dark-purple-100">
+        <nav className="w-full py-4 shadow shadow-purple-800 bg-purple-100 dark:bg-dark-purple-100">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
                 {/* Section Logo */}
                 <div className="flex items-center space-x-2">

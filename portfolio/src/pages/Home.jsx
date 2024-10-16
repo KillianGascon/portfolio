@@ -54,7 +54,6 @@ const body = () => {
                 </section>
             </div>
         </div>
-        
     </div>
   )
 }
