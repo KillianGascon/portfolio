@@ -36,9 +36,6 @@ const Navbar = () => {
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <Link to="/work" className="p-2">Projets</Link>
                     </li>
-                    {/* <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
-                        <a href="#about" className="p-2">About</a>
-                    </li> */}
                 </ul>
 
                 {/* Section Icônes sociales + Bouton thème */}
