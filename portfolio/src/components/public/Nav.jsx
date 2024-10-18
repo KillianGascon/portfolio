@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaGithub,FaLinkedin } from 'react-icons/fa';
 import { BsSun, BsMoon } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import pp from '../../assets/pp-github.png';
 
 const Navbar = () => {
     // État pour le mode sombre
@@ -20,13 +21,10 @@ const Navbar = () => {
         <nav className="w-full py-4 shadow shadow-purple-800 bg-purple-100 dark:bg-dark-purple-100">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
                 {/* Section Logo */}
-                <div className="flex items-center space-x-2">
-                    <div className="bg-purple-500 p-2 rounded">
-                        <img src="/logo.svg" alt="logo" className="h-8 w-8" />
-                        <Link to="/home" className="p-2"></Link>
-                    </div>
+                <Link to="/home" className="p-2 flex items-center justify-center space-x-2">
+                    <img src={pp} alt="logo" className="h-8 w-8 rounded-full" />
                     <span className="text-purple-1200 dark:text-dark-purple-1200 text-lg font-bold">Gascon Killian</span>
-                </div>
+                </Link>
 
                 {/* Liens de navigation */}
                 <ul className="flex space-x-6 bg-purple-500 px-6 py-2 rounded-full dark:bg-dark-purple-500">
