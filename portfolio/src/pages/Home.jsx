@@ -1,166 +1,31 @@
-// import React from 'react'
-// import Nav from "../components/public/Nav";
-
-
-
-// const body = () => {
-//   return (
-//     <div>
-//         <div>
-//             <Nav/>
-//         </div>
-
-
-//         <div className="w-full h-screen bg-gradient-to-b from-purple-700 from-85% to-purple-500">
-//             <div className="max-w-7xl mx-auto flex items-center justify-center h-full">
-//                 <div className="text-center">
-//                     <h1 className="text-4xl text-purple-1000 font-bold">Bonjour, je suis Killian Gascon</h1>
-//                     <p className="text-purple-1000 text-lg mt-4">
-//                         Je suis étudiant en deuxième année d'étude d'informatique !
-//                     </p>
-//                 </div>
-//             </div>
-//         </div>
-
-//         <div className='w-full h-auto min-h-screen p-4 flex justify-center items-center bg-gradient-to-b from-purple-500 from-3% to-purple-100 to-97%'>
-//             <div className="flex flex-col md:flex-row justify-center items-stretch gap-4">
-//                 <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-//                     <article>
-//                         <h1 className="text-4xl text-purple-1100 font-bold">Qui je suis ?</h1>
-//                         <p className="text-purple-1100 text-lg mt-4">
-//                             Bonjour, je m'appelle Killian Gascon, je suis actuellement étudiant en informatique afin de devenir développeur ou expert en cybersécurité.
-//                         </p>
-//                     </article>
-//                 </section>
-
-//                 <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-//                     <article>
-//                         <h1 className="text-4xl text-purple-1100 font-bold">Etudes</h1>
-//                         <p className="text-purple-1100 text-lg mt-4">
-//                             Ecole : Epsi Nantes<br />
-//                             Formation : BTS SIO<br />
-//                             Diplômes : Permis de conduire, Baccalauréat Général, PSC1 (diplôme de premiers secours)
-//                         </p>
-//                     </article>
-//                 </section>
-
-//                 <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-//                     <article>
-//                         <h1 className="text-4xl text-purple-1100 font-bold">Mes Passes-temps</h1>
-//                         <p className="text-purple-1100 text-lg mt-4">
-//                             La programmation, le dessin sur tablette graphique et papier, la lecture, les jeux vidéo, l'Apiculture, le Vélo, la musique.
-//                         </p>
-//                     </article>
-//                 </section>
-//             </div>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default body
-
-import React from 'react'
+import React from 'react';
 import Nav from "../components/public/Nav";
+import pp from '../assets/pp-github.png';
 
-const body = () => {
-  // Fonction pour générer un positionnement aléatoire
-  const getRandomPosition = () => {
-    const top = Math.random() * 100; // Entre 0 et 100% du conteneur
-    const left = Math.random() * 100; // Entre 0 et 100% du conteneur
-    return { top: `${top}%`, left: `${left}%` };
-  };
-
+const Body = () => {
   return (
-    <div>
-        <div>
-            <Nav/>
+    <div className="relative w-full h-screen">
+      {/* Navbar */}
+      <div className="absolute top-0 left-0 w-full z-10">
+        <Nav />
+      </div>
+
+      {/* Contenu centré */}
+      <div className='flex items-center justify-center gap-20 w-full h-full'>
+        <div className='w-1/2 flex justify-end'>
+          <img src={pp} alt="logo" className="w-1/2 rounded-full" />
         </div>
-
-        {/* Ajout de motifs hexagonaux, cercles et triangles en semi-transparence */}
-        <div className="relative w-full h-screen bg-gradient-to-b from-purple-700 from-85% to-purple-500">
-            {/* Conteneur pour les formes en arrière-plan */}
-            <div className="absolute inset-0 opacity-40">
-                {/* Hexagones */}
-                {[...Array(10)].map((_, i) => {
-                    const position = getRandomPosition();
-                    return (
-                        <div 
-                            key={i} 
-                            className="w-20 h-20 bg-purple-300 opacity-40 transform rotate-45 clip-hexagon absolute"
-                            style={{ top: position.top, left: position.left }}
-                        />
-                    );
-                })}
-                {/* Cercles */}
-                {[...Array(6)].map((_, i) => {
-                    const position = getRandomPosition();
-                    return (
-                        <div 
-                            key={i} 
-                            className="w-16 h-16 bg-purple-400 opacity-30 rounded-full absolute"
-                            style={{ top: position.top, left: position.left }}
-                        />
-                    );
-                })}
-                {/* Triangles */}
-                {[...Array(6)].map((_, i) => {
-                    const position = getRandomPosition();
-                    return (
-                        <div 
-                            key={i} 
-                            className="w-24 h-24 bg-purple-500 opacity-20 clip-triangle absolute"
-                            style={{ top: position.top, left: position.left }}
-                        />
-                    );
-                })}
-            </div>
-
-            {/* Contenu principal */}
-            <div className="relative max-w-7xl mx-auto flex items-center justify-center h-full">
-                <div className="text-center">
-                    <h1 className="text-4xl text-purple-1000 font-bold">Bonjour, je suis Killian Gascon</h1>
-                    <p className="text-purple-1000 text-lg mt-4">
-                        Je suis étudiant en deuxième année d'étude d'informatique !
-                    </p>
-                </div>
-            </div>
+        <div className='w-1/2'>
+        <div className='flex gap-3'>
+            <h2 className="text-4xl text-slate-800 font-bold">Gascon</h2>
+            <h2 className="text-4xl text-purple-1100 font-bold">Killian</h2>
         </div>
-
-        <div className='w-full h-auto min-h-screen p-4 flex justify-center items-center bg-gradient-to-b from-purple-500 from-3% to-purple-100 to-97%'>
-            <div className="flex flex-col md:flex-row justify-center items-stretch gap-4">
-                <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-                    <article>
-                        <h1 className="text-4xl text-purple-1100 font-bold">Qui je suis ?</h1>
-                        <p className="text-purple-1100 text-lg mt-4">
-                            Bonjour, je m'appelle Killian Gascon, je suis actuellement étudiant en informatique afin de devenir développeur ou expert en cybersécurité.
-                        </p>
-                    </article>
-                </section>
-
-                <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-                    <article>
-                        <h1 className="text-4xl text-purple-1100 font-bold">Etudes</h1>
-                        <p className="text-purple-1100 text-lg mt-4">
-                            Ecole : Epsi Nantes<br />
-                            Formation : BTS SIO<br />
-                            Diplômes : Permis de conduire, Baccalauréat Général, PSC1 (diplôme de premiers secours)
-                        </p>
-                    </article>
-                </section>
-
-                <section className='flex-1 flex flex-col justify-between text-center bg-purple-500 shadow shadow-purple-800 rounded-xl p-6'>
-                    <article>
-                        <h1 className="text-4xl text-purple-1100 font-bold">Mes Passes-temps</h1>
-                        <p className="text-purple-1100 text-lg mt-4">
-                            La programmation, le dessin sur tablette graphique et papier, la lecture, les jeux vidéo, l'Apiculture, le Vélo, la musique.
-                        </p>
-                    </article>
-                </section>
-            </div>
+          <p className="text-2xl text-purple-1100 font-bold">Développeur</p>
+          <p className="text-lg text-slate-800 font-medium w-1/2">Je suis un étudiant en informatique passionné par le développement web. Je suis actuellement en 2ème année de DUT Informatique à l'IUT de Mulhouse. Je suis à la recherche d'une alternance pour ma 3ème année de DUT.</p>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default body;
+export default Body;

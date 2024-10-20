@@ -18,7 +18,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full py-4 shadow shadow-purple-800 bg-purple-100 dark:bg-dark-purple-100">
+        <nav className="w-full py-4 bg-purple-100 dark:bg-dark-purple-100">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
                 {/* Section Logo */}
                 <Link to="/home" className="p-2 flex items-center justify-center space-x-2">
@@ -32,14 +32,22 @@ const Navbar = () => {
                         <Link to="/home" className="p-2">Accueil</Link>
                     </li>
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
+                        <Link to="/about" className="p-2">A Propos</Link>
+                    </li>
+                    <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <Link to="/work" className="p-2">Projets</Link>
                     </li>
                 </ul>
 
                 {/* Section Icônes sociales + Bouton thème */}
                 <div className="flex space-x-4 items-center text-purple-1200 dark:text-dark-purple-1200">
-                    <FaLinkedin className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
-                    <FaGithub className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
+                    <a href='https://www.linkedin.com/in/killian-gascon/' target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
+                    </a>
+                    <a href='https://github.com/KillianGascon' target="_blank" rel="noopener noreferrer">
+                        <FaGithub className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
+                    </a>
+                    
 
                     {/* Bouton pour changer de thème avec switch */}
                     <div 

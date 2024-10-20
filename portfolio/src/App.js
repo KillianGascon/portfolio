@@ -1,7 +1,8 @@
 // import Nav from "./components/public/Nav"
 import Work from "./pages/Work"
 import Home from "./pages/Home"
-import { BrowserRouter, Route, Routes, Switch } from "react-router-dom"
+import About from "./pages/About"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
           <Route index element={<Home/>}/>
 
           <Route path="/home" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
           <Route path="/work" element={<Work/>}/>
 
           {/* <Route path="*" element={<NotFound/>}/> */}
