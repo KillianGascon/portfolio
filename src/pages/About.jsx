@@ -1,9 +1,18 @@
-import React from 'react';
 import Nav from "../components/public/Nav";
 import { useTranslation } from 'react-i18next';
+import AOS from 'aos'; // Import de AOS
+import 'aos/dist/aos.css'; // Import des styles de AOS
+import React, { useEffect } from 'react';
 
 const About = () => {
   const { t } = useTranslation(); // Ajoutez cette ligne pour obtenir la fonction t
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   
   return (
     <div className='flex flex-col h-screen'>
@@ -11,7 +20,7 @@ const About = () => {
         <Nav />
       </div>
 
-      <div className='flex flex-col items-center justify-center flex-1 p-10 gap-10 dark:bg-gray-950'>
+      <div className='flex flex-col items-center justify-center flex-1 p-10 gap-10 dark:bg-gray-950'  data-aos="fade-up">
         <h1 className="text-4xl text-purple-1100 font-bold text-center">{t('about.title')}</h1>
 
         <div className='flex flex-row justify-center items-stretch gap-10 p-5 flex-wrap'>
