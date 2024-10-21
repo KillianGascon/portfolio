@@ -1,0 +1,37 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects"
+    },
+
+    "home": {
+        "developer": "Developer",
+        "description" : "I am a computer science student passionate about development and cybersecurity. I am currently in the 2nd year of BTS SIO at the EPSI engineering school. I am looking for an internship for this second year and a work-study program for my 3rd year."
+    },
+
+    "about": {
+        "title": "About me",
+        "card1_title": "Who am I ?",
+        "card1_desc": "Hello, my name is Killian Gascon, I am currently a computer science student in order to become a developer or cybersecurity expert.",
+        "card2_title": "Studies",
+        "card2_school": "School : Epsi Nantes",
+        "card2_program": "Formation : BTS SIO",
+        "card2_degrees":"Degrees : Driving license, General Baccalaureate, PSC1 (first aid diploma)",
+        "card2_button": "My school",
+        "card3_title": "My Hobbies",
+        "card3_desc": "Programming, drawing on a graphics tablet and paper, reading, video games, beekeeping, cycling, doing sports, music."
+    },
+
+    "work": {
+        "title_technos": "My favorite Technologies",
+        "title_projects": "Last Projects",
+        "card1_title": "Epsi Escape :",
+        "card1_desc": "Game developed in C++ with unreal engine 5 for the Epsi school to present the life of a computer science student in the HEP campuses.",
+        "card2_title": "Facial recognition AI :",
+        "card2_desc": "Personal project with the realization of a facial and object recognition AI in Python.",
+        "card3_title": "Portfolio Website :",
+        "card3_desc": "Portfolio website developed in ReactJS to present my projects and skills.",
+        "git_my": "My"
+    }
+}
