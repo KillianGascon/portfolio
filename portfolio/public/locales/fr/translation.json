@@ -1,0 +1,37 @@
+{
+    "navbar": {
+        "home": "Accueil",
+        "about": "A Propos",
+        "projects": "Projets"
+    },
+
+    "home": {
+        "developer": "Développeur",
+        "description" : "Je suis un étudiant en informatique passionné par le développement et la cybersécurité. Je suis actuellement en 2ème année de BTS SIO à l'école D'ingénieurs EPSI. Je suis à la recherche d'un stage pour cette deuxième année et d'une alternance pour ma 3ème année."
+    },
+
+    "about": {
+        "title": "A Propos de moi",
+        "card1_title": "Qui suis-je ?",
+        "card1_desc": "Bonjour, je m'appelle Killian Gascon, je suis actuellement étudiant en informatique afin de devenir développeur ou expert en cybersécurité.",
+        "card2_title": "Mes Études",
+        "card2_school": "Ecole : Epsi Nantes",
+        "card2_program": "Formation : BTS SIO",
+        "card2_degrees":"Diplômes : Permis de conduire, Baccalauréat Général, PSC1 (diplôme de premiers secours)",
+        "card2_button": "Mon école",
+        "card3_title": "Mes Passes-temps",
+        "card3_desc": "La programmation, le dessin sur tablette graphique et papier, la lecture, les jeux vidéo, l'apiculture, le vélo, faire du sport, la musique."
+    },
+
+    "work": {
+        "title_technos": "Mes Technos préférées",
+        "title_projects": "Derniers Projets",
+        "card1_title": "Epsi Escape :",
+        "card1_desc": "Jeu développé en C++ avec unreal engine 5 pour l'école Epsi afin de présenter la vie d'un étudiant en informatique dans les campus HEP.",
+        "card2_title": "IA de reconnaissance faciale :",
+        "card2_desc": "Projet personnel avec la réalisation d'une IA de reconnaissance faciale et d'objets en Python.",
+        "card3_title": "Site Portfolio :",
+        "card3_desc": "Site portfolio développé en ReactJS pour présenter mes projets et mes compétences.",
+        "git_my": "Mon"
+    }
+}
