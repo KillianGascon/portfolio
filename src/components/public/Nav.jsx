@@ -8,7 +8,7 @@ import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const [darkMode, setDarkMode] = useState(() => {
         const savedMode = localStorage.getItem('dark-mode');
         return savedMode ? JSON.parse(savedMode) : false;
@@ -56,14 +56,13 @@ const Navbar = () => {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setIsDropdownOpen(false); // Ferme le dropdown après la sélection de la langue
+        setIsMenuOpen(false);
     };
-
-    const { t } = useTranslation();
 
     return (
         <nav className="w-full py-4 dark:bg-gray-950 relative">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
-            <Link to="/home" className="p-2 flex items-center justify-center space-x-2">
+                <Link to="/home" className="p-2 flex items-center justify-center space-x-2">
                     <img src={pp} alt="logo" className="h-8 w-8 rounded-full" />
                     <span className="text-purple-1200 dark:text-dark-purple-1200 text-lg font-bold">Gascon Killian</span>
                 </Link>
@@ -136,6 +135,18 @@ const Navbar = () => {
                         </li>
                         <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
                             <Link to="/work" className="p-4 block">Projets</Link>
+                        </li>
+                        
+                        {/* Sélecteur de langue pour petit écran */}
+                        <li className="text-2xl">
+                            <div className="flex justify-center space-x-4">
+                                <div className="cursor-pointer" onClick={() => changeLanguage('en')}>
+                                    <Flag code="GBR" style={{ width: '36px', height: '24px' }} /> 
+                                </div>
+                                <div className="cursor-pointer" onClick={() => changeLanguage('fr')}>
+                                    <Flag code="FRA" style={{ width: '36px', height: '24px' }} /> 
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
