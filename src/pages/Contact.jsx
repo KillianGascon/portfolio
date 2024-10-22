@@ -36,11 +36,11 @@ const Contact = () => {
                         <FaEnvelope size={50} />
                     </a>
 
-                    <a href="https://www.linkedin.com/in/ton-profil-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
+                    <a href="https://www.linkedin.com/in/killian-gascon/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
                         <FaLinkedin size={50} />
                     </a>
 
-                    <a href="https://github.com/ton-profil-github" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
+                    <a href="https://github.com/KillianGascon" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
                         <FaGithub size={50} />
                     </a>
                 </div>
