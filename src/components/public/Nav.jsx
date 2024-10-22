@@ -56,6 +56,7 @@ const Navbar = () => {
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setIsDropdownOpen(false); // Ferme le dropdown après la sélection de la langue
+        setIsMenuOpen(false);
     };
 
     return (
