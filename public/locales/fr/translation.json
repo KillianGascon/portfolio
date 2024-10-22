@@ -33,5 +33,10 @@
         "card3_title": "Site Portfolio :",
         "card3_desc": "Site portfolio développé en ReactJS pour présenter mes projets et mes compétences.",
         "git_my": "Mon"
+    },
+
+    "contact": {
+        "contact_me": "Contactez-moi",
+        "contact_desc": "Si vous souhaitez me contacter, vous pouvez utiliser les informations ci-dessous."
     }
 }

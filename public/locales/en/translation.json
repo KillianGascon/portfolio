@@ -33,5 +33,10 @@
         "card3_title": "Portfolio Website :",
         "card3_desc": "Portfolio website developed in ReactJS to present my projects and skills.",
         "git_my": "My"
+    },
+
+    "contact": {
+        "contact_me": "Contact me",
+        "contact_desc": "If you would like to contact me, you can use the information below."
     }
 }
