@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { BsSun, BsMoon } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -78,14 +78,20 @@ const Navbar = () => {
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <Link to="/work" className="p-2">{t('navbar.projects')}</Link>
                     </li>
+                    <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
+                        <Link to="/contact" className="p-2">Contact</Link>
+                    </li>
                 </ul>
 
                 <div className="hidden md:flex space-x-4 items-center text-purple-1200 dark:text-dark-purple-1200">
+                    <a href='mailto:gasconkillian.pro@gmail.com' target="_blank" rel="noopener noreferrer">
+                        <FaEnvelope className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 w-5 h-auto cursor-pointer" />
+                    </a>
                     <a href='https://www.linkedin.com/in/killian-gascon/' target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
+                        <FaLinkedin className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 w-5 h-auto cursor-pointer" />
                     </a>
                     <a href='https://github.com/KillianGascon' target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 cursor-pointer" />
+                        <FaGithub className="hover:text-purple-1000 dark:hover:text-dark-purple-1100 w-5 h-auto cursor-pointer" />
                     </a>
 
                     <div 
