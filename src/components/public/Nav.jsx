@@ -136,7 +136,10 @@ const Navbar = () => {
                         <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
                             <Link to="/work" className="p-4 block">Projets</Link>
                         </li>
-                        
+                        <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
+                            <Link to="/contact" className="p-4 block">Contact</Link>
+                        </li>
+
                         {/* Sélecteur de langue pour petit écran */}
                         <li className="text-2xl">
                             <div className="flex justify-center space-x-4">
