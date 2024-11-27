@@ -5,6 +5,8 @@ import javascriptImage from '../assets/javascript.png';
 import phpImage from '../assets/php.png';
 import epsiescape from '../assets/Epsi_Escape.png';
 import pp_github from '../assets/pp-github.png';
+import iafacial from '../assets/IA_faciale.png';
+import rond_artiste from '../assets/rond_artiste.png';
 import { useTranslation } from 'react-i18next';
 import AOS from 'aos'; // Import de AOS
 import 'aos/dist/aos.css'; // Import des styles de AOS
@@ -59,7 +61,7 @@ const Work = () => {
           </div>
 
           <div data-aos="fade-up" className='flex flex-col justify-center gap-5 max-w-md w-full bg-gradient-to-b from-white to-purple-50 dark:from-gray-950 dark:to-dark-purple-100 rounded-lg border border-purple-500 dark:border-dark-purple-500 shadow-lg shadow-purple-500 dark:shadow-dark-purple-500 p-4 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500 transition-transform duration-300 min-h-[500px]'>
-            <img src={epsiescape} alt="Projet IA" className="w-full" />
+            <img src={iafacial} alt="Projet IA" className="w-auto h-56" />
             <h2 className="text-purple-1200 dark:text-slate-200 font-bold text-xl mt-4 text-center">{t('work.card2_title')}</h2>
             <p className="text-purple-1100 dark:text-slate-100 text-lg mt-4 text-center">
               {t('work.card2_desc')}
@@ -67,7 +69,7 @@ const Work = () => {
           </div>
 
           <div data-aos="fade-up" className='flex flex-col justify-center gap-5 max-w-md w-full bg-gradient-to-b from-white to-purple-50 dark:from-gray-950 dark:to-dark-purple-100 rounded-lg border border-purple-500 dark:border-dark-purple-500 shadow-lg shadow-purple-500 dark:shadow-dark-purple-500 p-4 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500 transition-transform duration-300 min-h-[500px]'>
-            <img src={epsiescape} alt="Autre projet" className="w-full" />
+            <img src={rond_artiste} alt="Autre projet" className="w-auto h-56" />
             <h2 className="text-purple-1200 dark:text-slate-200 font-bold text-xl mt-4 text-center">{t('work.card3_title')}</h2>
             <p className="text-purple-1100 dark:text-slate-100 text-lg mt-4 text-center">
               {t('work.card3_desc')}

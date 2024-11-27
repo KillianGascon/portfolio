@@ -30,8 +30,8 @@
         "card1_desc": "Jeu développé en C++ avec unreal engine 5 pour l'école Epsi afin de présenter la vie d'un étudiant en informatique dans les campus HEP.",
         "card2_title": "IA de reconnaissance faciale :",
         "card2_desc": "Projet personnel avec la réalisation d'une IA de reconnaissance faciale et d'objets en Python.",
-        "card3_title": "Site Portfolio :",
-        "card3_desc": "Site portfolio développé en ReactJS pour présenter mes projets et mes compétences.",
+        "card3_title": "Rond d'Artistes :",
+        "card3_desc": "Projet Scolaire ayant pour but de gérer plusieures galeries d'arts en tenant compte des plannings d'exposition et des lieux.",
         "git_my": "Mon"
     },
 
