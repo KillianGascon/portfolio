@@ -20,7 +20,10 @@
         "card2_degrees":"Degrees : Driving license, General Baccalaureate, PSC1 (first aid diploma)",
         "card2_button": "My school",
         "card3_title": "My Hobbies",
-        "card3_desc": "Programming, drawing on a graphics tablet and paper, reading, video games, beekeeping, cycling, doing sports, music."
+        "card3_desc": "Programming, drawing on a graphics tablet and paper, reading, video games, beekeeping, cycling, doing sports, music.",
+        "card4_title": "Documents",
+        "card4_cv_button": "My CV",
+        "card4_report_button": "My report"
     },
 
     "work": {

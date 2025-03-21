@@ -81,6 +81,9 @@ const Navbar = () => {
                     <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
                         <Link to="/contact" className="p-2">Contact</Link>
                     </li>
+                    <li className="text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition">
+                        <Link to="/blog" className="p-2">Blog</Link>
+                    </li>
                 </ul>
 
                 <div className="hidden md:flex space-x-4 items-center text-purple-1200 dark:text-dark-purple-1200">
@@ -134,17 +137,21 @@ const Navbar = () => {
                 <div ref={menuRef} className="absolute right-0 top-16 w-full flex justify-end transition-all duration-300 ease-in-out">
                     <ul className="bg-purple-400 dark:bg-purple-100 rounded-lg shadow-lg py-8 px-6 text-center space-y-6 w-full flex flex-col">
                         <li className="border-b border-purple-700 dark:border-dark-purple-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
-                            <Link to="/home" className="p-4 block">Accueil</Link> 
+                            <Link to="/home" className="p-4 block">{t('navbar.home')}</Link> 
                         </li>
                         <li className="border-b border-purple-700 dark:border-dark-purple-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
-                            <Link to="/about" className="p-4 block">À Propos</Link>
+                            <Link to="/about" className="p-4 block">{t('navbar.about')}</Link>
                         </li>
                         <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
-                            <Link to="/work" className="p-4 block">Projets</Link>
+                            <Link to="/work" className="p-4 block">{t('navbar.projects')}</Link>
                         </li>
                         <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
                             <Link to="/contact" className="p-4 block">Contact</Link>
                         </li>
+                        <li className="border-b border-purple-700 dark:border-dark-slate-300 text-purple-1100 dark:text-dark-purple-1200 hover:text-purple-1200 dark:hover:text-dark-purple-1100 transition text-2xl">
+                            <Link to="/blog" className="p-4 block">Blog</Link>
+                        </li>
+                        
 
                         {/* Sélecteur de langue pour petit écran */}
                         <li className="text-2xl">

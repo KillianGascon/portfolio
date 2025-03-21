@@ -20,7 +20,10 @@
         "card2_degrees":"Diplômes : Permis de conduire, Baccalauréat Général, PSC1 (diplôme de premiers secours)",
         "card2_button": "Mon école",
         "card3_title": "Mes Passes-temps",
-        "card3_desc": "La programmation, le dessin sur tablette graphique et papier, la lecture, les jeux vidéo, l'apiculture, le vélo, faire du sport, la musique."
+        "card3_desc": "La programmation, le dessin sur tablette graphique et papier, la lecture, les jeux vidéo, l'apiculture, le vélo, faire du sport, la musique.",
+        "card4_title": "Documents",
+        "card4_cv_button": "Mon CV",
+        "card4_report_button": "Mon rapport"
     },
 
     "work": {
