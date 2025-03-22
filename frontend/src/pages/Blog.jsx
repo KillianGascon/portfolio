@@ -16,7 +16,7 @@ const RSSFeed = () => {
 
     const fetchArticles = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/feeds');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/feeds`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -50,7 +50,7 @@ const RSSFeed = () => {
           ) : error ? (
             <div data-aos="fade-up" className='flex flex-col justify-center gap-5 max-w-md w-full bg-gradient-to-b from-white to-purple-50 dark:from-gray-950 dark:to-dark-purple-100 rounded-lg border border-purple-500 dark:border-dark-purple-500 shadow-lg shadow-purple-500 dark:shadow-dark-purple-500 p-4'>
               <p className="text-lg text-red-500 font-medium text-center">Error: {error}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 text-center">Make sure the backend server is running at http://localhost:8080</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 text-center">Make sure the backend server is running at {process.env.REACT_APP_API_URL}</p>
             </div>
           ) : (
             articles.map((article, index) => (
