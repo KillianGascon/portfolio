@@ -217,7 +217,6 @@ async fn main() -> std::io::Result<()> {
         .unwrap_or_else(|_| "8080".to_string())
         .parse::<u16>()
         .expect("PORT must be a number");
-    let frontend_url = env::var("FRONTEND_URL").unwrap_or_else(|_| "http://localhost:3000".to_string());
     
     println!("Starting server at http://{}:{}", host, port);
     
@@ -227,7 +226,7 @@ async fn main() -> std::io::Result<()> {
     
     HttpServer::new(move || {
         let cors = Cors::default()
-            .allowed_origin(&frontend_url)
+            .allow_any_origin()  // Allow any origin
             .allow_any_method()
             .allow_any_header()
             .max_age(3600);

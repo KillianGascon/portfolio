@@ -16,6 +16,7 @@ const RSSFeed = () => {
 
     const fetchArticles = async () => {
       try {
+        console.log('Fetching from:', `${process.env.REACT_APP_API_URL}/api/feeds`);
         const response = await fetch(`${process.env.REACT_APP_API_URL}/api/feeds`, {
           method: 'GET',
           headers: {
@@ -33,6 +34,11 @@ const RSSFeed = () => {
         setLoading(false);
       } catch (err) {
         console.error("Error fetching articles:", err);
+        console.error("Error details:", {
+          message: err.message,
+          stack: err.stack,
+          url: `${process.env.REACT_APP_API_URL}/api/feeds`
+        });
         setError(err.message);
         setLoading(false);
       }
