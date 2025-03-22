@@ -1,26 +1,29 @@
 # Build stage
-FROM node:18-alpine as builder
+FROM node:18-alpine AS builder
 
+# Définir le répertoire de travail
 WORKDIR /app
+
+# Copier les fichiers nécessaires pour installer les dépendances
 COPY package*.json ./
+
+# Installer les dépendances
 RUN npm install
 
+# Copier le reste des fichiers pour le build
 COPY . .
+
+# Construire l'application
 RUN npm run build
 
 # Runtime stage
-FROM node:18-alpine
+FROM nginx:alpine
 
-WORKDIR /app
+# Copier le build dans le répertoire Nginx
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy built assets from builder
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/node_modules ./node_modules
+# Exposer le port 80
+EXPOSE 80
 
-# Expose the port
-EXPOSE 3000
-
-# Start the application
-CMD ["npm", "start"] 
+# Commande par défaut pour démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]
