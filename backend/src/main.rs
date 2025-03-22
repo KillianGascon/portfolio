@@ -9,6 +9,7 @@ use futures::future::join_all;
 use std::collections::HashMap;
 use std::time::SystemTime;
 use std::env;
+use actix_web::http;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct Article {
@@ -226,10 +227,12 @@ async fn main() -> std::io::Result<()> {
     
     HttpServer::new(move || {
         let cors = Cors::default()
-            .allow_any_origin()  // Allow any origin
-            .allow_any_method()
-            .allow_any_header()
-            .max_age(3600);
+            .allowed_origin("https://portfolio.syntaxlab.fr")  // Allow your frontend domain
+            .allowed_methods(vec!["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+            .allowed_headers(vec![http::header::AUTHORIZATION, http::header::ACCEPT])
+            .allowed_header(http::header::CONTENT_TYPE)
+            .max_age(3600)
+            .supports_credentials();
 
         App::new()
             .app_data(app_state.clone())
