@@ -16,7 +16,15 @@ const RSSFeed = () => {
 
     const fetchArticles = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/feeds`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/feeds`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          mode: 'cors'
+        });
+        
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
