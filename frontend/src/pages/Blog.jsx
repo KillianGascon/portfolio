@@ -2,8 +2,10 @@ import Nav from "../components/public/Nav";
 import React, { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const RSSFeed = () => {
+  const { t } = useTranslation();
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -55,17 +57,17 @@ const RSSFeed = () => {
       </div>
 
       <div className='flex flex-col items-center justify-center flex-1 p-10 gap-10 dark:bg-gray-950'>
-        <h1 className="text-4xl text-purple-1100 font-bold text-center" data-aos="fade-up">Tech News</h1>
+        <h1 className="text-4xl text-purple-1100 font-bold text-center" data-aos="fade-up">{t('tech_news')}</h1>
 
         <div className='flex flex-row justify-center items-stretch gap-10 p-5 flex-wrap'>
           {loading ? (
             <div data-aos="fade-up" className='flex flex-col justify-center gap-5 max-w-md w-full bg-gradient-to-b from-white to-purple-50 dark:from-gray-950 dark:to-dark-purple-100 rounded-lg border border-purple-500 dark:border-dark-purple-500 shadow-lg shadow-purple-500 dark:shadow-dark-purple-500 p-4'>
-              <p className="text-lg text-slate-800 dark:text-slate-100 font-medium text-center">Loading articles...</p>
+              <p className="text-lg text-slate-800 dark:text-slate-100 font-medium text-center">{t('loading')}</p>
             </div>
           ) : error ? (
             <div data-aos="fade-up" className='flex flex-col justify-center gap-5 max-w-md w-full bg-gradient-to-b from-white to-purple-50 dark:from-gray-950 dark:to-dark-purple-100 rounded-lg border border-purple-500 dark:border-dark-purple-500 shadow-lg shadow-purple-500 dark:shadow-dark-purple-500 p-4'>
-              <p className="text-lg text-red-500 font-medium text-center">Error: {error}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 text-center">Make sure the backend server is running at {process.env.REACT_APP_API_URL}</p>
+              <p className="text-lg text-red-500 font-medium text-center">{t('error', { error })}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 text-center">{t('error_message', { url: process.env.REACT_APP_API_URL })}</p>
             </div>
           ) : (
             articles.map((article, index) => (
@@ -90,7 +92,7 @@ const RSSFeed = () => {
                     {article.description}
                   </p>
                   <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                    Published: {new Date(article.pub_date).toLocaleDateString()}
+                    {t('published', { date: new Date(article.pub_date).toLocaleDateString() })}
                   </div>
                 </div>
                 <a 
@@ -100,7 +102,7 @@ const RSSFeed = () => {
                   className='flex justify-center items-center'
                 >
                   <button className='bg-purple-800 w-1/2 h-12 rounded-lg text-white hover:bg-purple-700 transition-colors duration-300'>
-                    Read Article
+                    {t('read_article')}
                   </button>
                 </a>
               </div>
