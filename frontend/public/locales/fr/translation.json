@@ -41,5 +41,14 @@
     "contact": {
         "contact_me": "Contactez-moi",
         "contact_desc": "Si vous souhaitez me contacter, vous pouvez utiliser les informations ci-dessous."
+    },
+
+    "article": {
+        "loading": "Chargement des articles...",
+        "error": "erreur: {{error}}",
+        "error_message": "Vérifiez bien que votre backend est en ligne à l'url suivante : {{url}}",
+        "tech_news": "News Technologiques",
+        "published": "Publié le : {{date}}",
+        "read_article": "Lire l'article"
     }
 }

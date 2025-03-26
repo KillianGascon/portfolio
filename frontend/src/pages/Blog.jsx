@@ -102,7 +102,7 @@ const RSSFeed = () => {
                   className='flex justify-center items-center'
                 >
                   <button className='bg-purple-800 w-1/2 h-12 rounded-lg text-white hover:bg-purple-700 transition-colors duration-300'>
-                    {t('read_article')}
+                    {t('article.read_article')}
                   </button>
                 </a>
               </div>
