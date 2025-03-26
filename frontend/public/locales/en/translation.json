@@ -43,7 +43,7 @@
         "contact_desc": "If you would like to contact me, you can use the information below."
     },
 
-    "article": {
+    "articles": {
         "loading": "Loading articles...",
         "error": "Error: {{error}}",
         "error_message": "Make sure the backend server is running at {{url}}",

@@ -43,7 +43,7 @@
         "contact_desc": "Si vous souhaitez me contacter, vous pouvez utiliser les informations ci-dessous."
     },
 
-    "article": {
+    "articles": {
         "loading": "Chargement des articles...",
         "error": "erreur: {{error}}",
         "error_message": "Vérifiez bien que votre backend est en ligne à l'url suivante : {{url}}",
